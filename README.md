@@ -1,6 +1,8 @@
 # weatherforecast
 Basic RESTful Weather Forecast with Java
 
+This is a sample project to get familiar with Java, Spring, REST, JUnit, Mockito technologies and frameworks. It was developed using Test-Driven Development.
+
 Example usage is:
 
 `http://localhost:8080/forecast?city=london&country=uk`
