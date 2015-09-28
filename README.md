@@ -1,7 +1,7 @@
 # weatherforecast
 Basic RESTful Weather Forecast with Java
 
-This is a sample project to get familiar with Java, Spring, REST, JUnit, Mockito technologies and frameworks. It was developed using Test-Driven Development.
+This is a sample project to get familiar with Java, Spring, REST, JUnit, Mockito technologies and frameworks.
 
 Example usage is:
 
