@@ -39,13 +39,24 @@ public class YahooWeatherRetriever implements IWeatherRetriever {
     }
 
     protected String retrieveResponse(String url) throws Exception {
-        URLConnection connection = new URL(url).openConnection();
-        connection.setRequestProperty("Accept-Charset", CHARSET);
-        InputStream response = connection.getInputStream();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(response, CHARSET));
-        String line = reader.readLine();
-        assert(line != null);
-        return line;
+    	StringBuilder jsonLine = new StringBuilder();
+        try {
+        	URLConnection connection = new URL(url).openConnection();
+        	connection.setRequestProperty("Accept-Charset", CHARSET);
+        	InputStream response = connection.getInputStream();
+        	BufferedReader reader = new BufferedReader(new InputStreamReader(response, CHARSET));
+        	try {
+        		String line;
+        		while((line = reader.readLine()) != null) {
+                    jsonLine.append(line).append("\n");
+                }
+        	} finally {
+                reader.close();
+            }
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to read from json stream", e);
+        }
+        return jsonLine.toString();
     }
 
     public List<Weather> parseForecastResponse(String line) throws JSONException, ParseException {
