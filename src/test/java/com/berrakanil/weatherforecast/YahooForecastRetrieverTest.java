@@ -39,7 +39,7 @@ public class YahooForecastRetrieverTest {
         +    "  {\"channel\":"
         +    "    {\"item\":"
         +    "      {\"condition\": "
-        +    "        {\"code\":\"31\",\"date\":\"Sun, 27 Sep 2015 10:59 pm EEST\",\"temp\":\"20\",\"text\":\"Clear\"},\"description\":\"\",\"forecast\":"
+        +    "        {\"code\":\"31\",\"date\":\"Sun, 27 Sep 2015 10:59 pm EEST\",\"temp\":\"20\",\"text\":\"Clear\"},\"description\":\"\",\"forecast\":\n"
         +    "          ["
         +    "            {\"code\":\"33\",\"date\":\"27 Sep 2015\",\"day\":\"Sun\",\"high\":\"29\",\"low\":\"15\",\"text\":\"Mostly Clear\"},"
         +    "            {\"code\":\"30\",\"date\":\"28 Sep 2015\",\"day\":\"Mon\",\"high\":\"31\",\"low\":\"16\",\"text\":\"Partly Cloudy\"},"
